@@ -1,7 +1,7 @@
-import page.SecondPO;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import page.SecondPO;
 
 public class PinkTShirt extends BaseTest {
 

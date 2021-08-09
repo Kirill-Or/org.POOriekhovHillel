@@ -4,11 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
 
-    protected WebDriver driver;
+    private WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -34,6 +36,8 @@ public abstract class BasePage {
             select.selectByVisibleText(visibleText);
     }
     public boolean isDisplayed (By locator){
+        WebDriverWait webDriverWait = new WebDriverWait (driver, 3);
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         return getWebElement(locator).isDisplayed();
     }
 
