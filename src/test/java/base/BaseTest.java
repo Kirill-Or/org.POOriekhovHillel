@@ -20,7 +20,7 @@ public class BaseTest {
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     setDriver(driver);
 }
-//@AfterMethod
+@AfterMethod
 public void driverQuit(){
     getDriver().quit();
 }
