@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite by class">
+    <test name="org.POOriekhovHillel">
+        <classes>
+            <class name="Homework17.PinkTShirt"/>
+            <class name="HomeWork18.JeansWitchPageFactory"/>
+            <class name="HomeWork18.SendCommentWithPageFactory"/>
+        </classes>
+    </test>
+</suite>

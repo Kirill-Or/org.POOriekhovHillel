@@ -28,14 +28,17 @@ public class SecondPO extends BasePage{
     }
 
     public void clickTShirt() {
+        log("click on TShirt");
         clickToLocator(chooseTShirt);
     }
 
     public void chooseColor() {
+        log("choose color");
         selectByText(color,"Pink");
     }
 
     public void chooseSize() {
+        log("choose size");
         selectByText(size, "37");
     }
 
@@ -46,6 +49,7 @@ public class SecondPO extends BasePage{
       } */
 // Пробывал разные варианты но не вышло
     public void chooseQuantity() {
+        log("choose quantity");
         for (int i = 0; i < 2; i++)
             clickToLocator(quantity);
     }

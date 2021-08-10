@@ -1,3 +1,5 @@
+package HomeWork18;
+
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,6 +9,8 @@ public class JeansWitchPageFactory extends BaseTest {
 
     @Test
     public void addToCartJeansTest () throws InterruptedException {
+
+        allureLog("is jeans added to cart");
         getDriver().get("http://shop.demoqa.com/");
         PageFactoryBlueQuery pageFactoryBlueQuery = new PageFactoryBlueQuery(getDriver());
         pageFactoryBlueQuery.clickToSearch();

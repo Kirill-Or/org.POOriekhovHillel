@@ -17,12 +17,15 @@ public class FirstPO  extends BasePage {
         super(driver);
     }
     public void moveToElement(){
+        log("move to element ");
         moveToLocator(fieldForHover);
     }
     public void addToWishListClick (){
+        log("add to wish List");
         clickToLocator(addToWishList);
     }
     public boolean isAddDisplayed (){
+log("is add displayed");
        return isDisplayed(addDisplayed);
     }
 }

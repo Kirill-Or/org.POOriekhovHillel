@@ -1,3 +1,5 @@
+package HomeWork18;
+
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,6 +8,7 @@ import page.PageFactoryComment;
 public class SendCommentWithPageFactory extends BaseTest {
     @Test
     public void wrongCaptcha () {
+        allureLog("waiting captcha error");
         getDriver().get("http://shop.demoqa.com/author/lsharm/");
         PageFactoryComment pageFactoryComment = new PageFactoryComment(getDriver());
         pageFactoryComment.clickOnReadMore();

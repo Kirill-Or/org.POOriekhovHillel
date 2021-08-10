@@ -55,8 +55,9 @@ public class PageFactoryBlueQuery {
         Select select = new Select(filterSizeLocator);
         select.selectByVisibleText(size);
     }
-    public void chooseFirstItem(){
+    public void chooseFirstItem() throws InterruptedException {
         chooseFirstItemLocator.click();
+        Thread.sleep(1500);
     }
     public void chooseColor (String color){
         Select select = new Select(chooseColorLocator);

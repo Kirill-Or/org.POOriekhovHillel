@@ -1,3 +1,5 @@
+package Homework17;
+
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,6 +9,8 @@ public class PinkTShirt extends BaseTest {
 
     @Test
     public void addToCartPinkTShirt(){
+        allureLog("is addToCartPinkTShirt");
+
         getDriver().get("https://shop.demoqa.com/");
         SecondPO secondPO = new SecondPO(getDriver());
         secondPO.moveToTShirt();
