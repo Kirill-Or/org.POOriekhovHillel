@@ -62,6 +62,7 @@ public class SecondPO extends BasePage{
     public boolean isTShirtAdded (){
         return isDisplayed(checkLocator);
 
+
     }
 }
 

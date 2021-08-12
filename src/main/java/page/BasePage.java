@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.DataProvider;
 
 public abstract class BasePage {
 
@@ -50,6 +51,8 @@ public abstract class BasePage {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         return getWebElement(locator).isDisplayed();
     }
+    public void sendKeysToLocator (By locator , String input) {
+        getWebElement(locator).sendKeys(input);
+    }
+    }
 
-
-}
