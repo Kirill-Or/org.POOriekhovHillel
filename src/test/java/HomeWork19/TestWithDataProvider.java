@@ -8,11 +8,6 @@ import page.PageObjectWithDataProvider;
 
 
 public class TestWithDataProvider extends BaseTest {
-//    private final By nameLocator = By.xpath("//input[@id='userName']");
-//    private final By emailLocator = By.xpath("//input[@id='userEmail']");
-//    private final By addressLocator = By.xpath("//textarea[@id='currentAddress']");
-//    private final By permanentLocator = By.xpath("//textarea[@id='permanentAddress']");
-//    private final By submitLocator = By.xpath("//textarea[@id='permanentAddress']");
 
 @Test( dataProvider= "data-provider")
     public void firstTestDataProvider(String name, String email, String address, String permanentLocator) throws InterruptedException {
