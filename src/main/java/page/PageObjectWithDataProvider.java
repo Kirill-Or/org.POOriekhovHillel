@@ -2,28 +2,29 @@ package page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.DataProvider;
 
-/*public class PageObjectWithDataProvider extends BasePage {
+
+public class PageObjectWithDataProvider extends BasePage {
 
     public PageObjectWithDataProvider(WebDriver driver) {
         super(driver);
     }
 
-    @DataProvider(name = "data-provider")
-    public Object [][] dpMethod() {
-        return new Object[][]{
-                {"John Smith", "johnsmith@example.com", "New York", "New York"},
-                {"Bob Dylan", "bobdylan@example.com", "San Francisco", "San Francisco"},
-                {"Petro Vasilevich", "petrovasilevich@example.com", "Mykolaiv", "Mykolaiv"},
-                {"Dan Balan", "DanBalan@example.com", "Norilsk", "Norilsk"},
-                {"Palvo Slavovich", "pavloslavovich@example.com", "Brno", "Brno"},
-        };
+    public void sendName (String massage){
+        getWebElement(nameLocator ).sendKeys(massage);
     }
-}
-/*
-
-
+    public void sendEmail (String massage){
+        getWebElement(emailLocator ).sendKeys(massage);
+    }
+    public void sendFirstAddress (String massage){
+        getWebElement(addressLocator ).sendKeys(massage);
+    }
+    public void sendSecondAddress (String massage){
+        getWebElement(permanentLocator ).sendKeys(massage);
+    }
+    public void clickOnSubmit (){
+        clickToLocator(submitLocator);
+    }
 
 private final By nameLocator = By.xpath("//input[@id='userName']");
     private final By emailLocator = By.xpath("//input[@id='userEmail']");
@@ -32,22 +33,7 @@ private final By nameLocator = By.xpath("//input[@id='userName']");
     private final By submitLocator = By.xpath("//textarea[@id='permanentAddress']");
 
 
-    @DataProvider(name = "data-provider")
-    public Object [][] dpMethod() {
-        return new Object[][]{
-                {"John Smith", "johnsmith@example.com", "New York", "New York"},
-                {"Bob Dylan", "bobdylan@example.com", "San Francisco", "San Francisco"},
-                {"Petro Vasilevich", "petrovasilevich@example.com", "Mykolaiv", "Mykolaiv"},
-                {"Dan Balan", "DanBalan@example.com", "Norilsk", "Norilsk"},
-                {"Palvo Slavovich", "pavloslavovich@example.com", "Brno", "Brno"},
-        };
     }
-
-    public void sendKeysToName (){
-        sendKeysToLocator(nameLocator, ());
-    }
- }
-*/
 
 
 
