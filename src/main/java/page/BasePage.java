@@ -46,6 +46,16 @@ public abstract class BasePage {
             Select select = new Select(getWebElement(locator));
             select.selectByVisibleText(visibleText);
     }
+    public void selectByValue (By locator, String value){
+        Select select = new Select(getWebElement(locator));
+        select.selectByValue(value);
+    }
+    public void selectByIndex (By locator, int index){
+        Select select = new Select(getWebElement(locator));
+        select.selectByIndex(index);
+    }
+
+
     public boolean isDisplayed (By locator){
         WebDriverWait webDriverWait = new WebDriverWait (driver, 3);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -54,5 +64,16 @@ public abstract class BasePage {
     public void sendKeysToLocator (By locator , String input) {
         getWebElement(locator).sendKeys(input);
     }
+    public void waitSomeWhere (By locator){
+        WebDriverWait webDriverWait = new WebDriverWait (driver, 3);
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    public void clickWithWait(By locator){
+        WebDriverWait webDriverWait = new WebDriverWait (driver, 3);
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator));
+        getWebElement(locator).click();
+
+    }
+
     }
 
